@@ -1,0 +1,1345 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="A picture of Hello Kitty (Kitty chan) drawn entirely using HTML and CS — no images. Works in most modern browsers (except for IE9).">
+<meta name="author" content="Lauren McConachie">
+<title>¡Feliz Cumpleaños Naomi! - Hello Kitty con Rosa 🌹</title>
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+body {
+	background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+	min-height: 100vh;
+	font-family: 'Arial', sans-serif;
+	overflow-x: hidden;
+}
+
+/* Contenedor principal de la animación */
+.animation-container {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+/* Mensaje de cumpleaños */
+.birthday-message {
+	text-align: center;
+	margin-bottom: 30px;
+	animation: fadeInDown 2s ease-out;
+}
+
+.birthday-message h1 {
+	font-size: 3rem;
+	color: #ff1493;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+	margin-bottom: 10px;
+	animation: bounce 2s infinite;
+}
+
+.birthday-message p {
+	font-size: 1.2rem;
+	color: #666;
+	margin-top: 10px;
+}
+
+#kitty {
+	position:relative;
+	width:500px;
+	height:550px;
+	margin:auto;
+	z-index:0;
+	-webkit-backface-visibility:hidden;
+	animation: kittyFloat 3s ease-in-out infinite;
+}
+
+/* Animación de Hello Kitty flotando */
+@keyframes kittyFloat {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+	40% { transform: translateY(-10px); }
+	60% { transform: translateY(-5px); }
+}
+
+#head {
+	position:absolute;
+	top:124px;
+	left:130px;
+	width:224px;
+	height:167px;
+	background-color:#FFF;
+	border:8px solid #000;
+	-moz-border-radius:160px;
+	-webkit-border-radius:160px;
+	border-radius:160px;
+	z-index:500;
+	-moz-transform:rotate(2deg);
+	-ms-transform:rotate(2deg);
+	-o-transform:rotate(2deg);
+	-webkit-transform:rotate(2deg);
+	transform:rotate(2deg);
+	-webkit-backface-visibility:hidden;
+	animation: headBob 2s ease-in-out infinite;
+}
+
+@keyframes headBob {
+	0%, 100% { transform: rotate(2deg); }
+	50% { transform: rotate(4deg); }
+}
+
+#leftear {
+	position:absolute;
+	top:-16px;
+	left:-3px;
+	width:57px;
+	height:61px;
+	border:8px solid #000;
+	border-bottom-color:transparent;
+	border-right-color:transparent;
+	-moz-border-radius:20px 37px 20px 44px;
+	-webkit-border-radius:20px 37px 20px 44px;
+	border-radius:20px 37px 20px 44px;
+	-moz-transform:rotate(14deg);
+	-ms-transform:rotate(14deg);
+	-o-transform:rotate(14deg);
+	-webkit-transform:rotate(14deg);
+	transform:rotate(14deg);
+	-webkit-backface-visibility:hidden;
+}
+#leftear span {
+	position:absolute;
+	top:2px;
+	left:-1px;
+	width:68px;
+	height:61px;
+	background-color:#FFF;
+	-moz-border-radius:18px 34px 20px 44px;
+	-webkit-border-radius:18px 34px 20px 44px;
+	border-radius:18px 34px 20px 44px;
+}
+#rightear {
+	position:absolute;
+	top:-27px;
+	left:143px;
+	width:57px;
+	height:61px;
+	background-color:#FFF;
+	border:8px solid #000;
+	border-bottom-color:transparent;
+	border-right-color:transparent;
+	-moz-border-radius:20px 37px 20px 44px;
+	-webkit-border-radius:20px 37px 20px 44px;
+	border-radius:20px 37px 20px 44px;
+	-moz-transform:rotate(80deg);
+	-ms-transform:rotate(80deg);
+	-o-transform:rotate(80deg);
+	-webkit-transform:rotate(80deg);
+	-webkit-backface-visibility:hidden;
+}
+
+.lefteye {
+	position:absolute;
+	top:97px;
+	left:45px;
+	width:19px;
+	height:24px;
+	background-color:#000;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	animation: blink 3s infinite;
+}
+.righteye {
+	position:absolute;
+	top:93px;
+	left:162px;
+	width:19px;
+	height:24px;
+	background-color:#000;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	animation: blink 3s infinite;
+}
+
+@keyframes blink {
+	0%, 90%, 100% { transform: scaleY(1); }
+	95% { transform: scaleY(0.1); }
+}
+
+/* Animación para cerrar los ojos cuando se toca la rosa */
+.lefteye.blink-close,
+.righteye.blink-close {
+	animation: none;
+	transform: scaleY(0.1);
+}
+
+ .nose {
+ 	position:absolute;
+ 	top:115px;
+ 	left:100px;
+ 	width:16px;
+ 	height:9px;
+ 	background-color:#FFB827;
+ 	border:6px solid #000;	
+ 	-moz-border-radius:25px;
+ 	-webkit-border-radius:25px;
+ 	border-radius:25px;
+ }
+ 
+ /* Cachetes rojos de Hello Kitty */
+ .left-cheek,
+ .right-cheek {
+ 	position: absolute;
+ 	width: 25px;
+ 	height: 15px;
+ 	background: radial-gradient(circle, #FFB6C1 0%, #FF69B4 50%, #FF1493 100%);
+ 	border-radius: 50%;
+ 	opacity: 0;
+ 	transition: opacity 0.5s ease;
+ 	z-index: 10;
+ }
+ 
+ .left-cheek {
+ 	top: 110px;
+ 	left: 25px;
+ }
+ 
+ .right-cheek {
+ 	top: 110px;
+ 	right: 25px;
+ }
+ 
+ /* Cachetes rojos cuando aparece el corazón */
+ .left-cheek.show,
+ .right-cheek.show {
+ 	opacity: 0.8;
+ 	animation: cheekGlow 1s ease-in-out infinite;
+ }
+ 
+ @keyframes cheekGlow {
+ 	0%, 100% { opacity: 0.8; transform: scale(1); }
+ 	50% { opacity: 1; transform: scale(1.1); }
+ }
+.leftwhiskers, .rightwhiskers {
+	background-color:#000;
+}
+.one {
+	position:absolute;
+	top:96px;
+	left:-1px;
+	width:20px;
+	height:9px;
+	-moz-border-radius:0 20px 15px 0;
+	-webkit-border-radius:0 20px 15px 0;
+	border-radius:0 20px 15px 0;
+	-moz-transform:rotate(6deg);
+	-ms-transform:rotate(6deg);
+	-o-transform:rotate(6deg);
+	-webkit-transform:rotate(6deg);
+}
+.one span {
+	display:block;
+	position:absolute;
+	left:-32px;
+	top:4px;
+	width:33px;
+	height:9px;
+	background-color:inherit;
+	-moz-border-radius: 35px 10px 10px;
+	-webkit-border-radius: 35px 10px 10px;
+	border-radius: 35px 10px 10px;
+	-moz-transform:rotate(-15deg);
+	-ms-transform:rotate(-15deg);
+	-o-transform:rotate(-15deg);
+	-webkit-transform:rotate(-15deg);
+}
+.two {
+	position:absolute;
+	top:120px;
+	left:6px;
+	width:15px;
+	height:8px;
+	-moz-border-radius:10px 20px 13px 10px;
+	-webkit-border-radius:10px 20px 13px 10px;
+	border-radius:10px 20px 13px 10px;
+	-moz-transform:rotate(-15deg);
+	-ms-transform:rotate(-15deg);
+	-o-transform:rotate(-15deg);
+	-webkit-transform:rotate(-15deg);
+}
+.two span {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:-24px;
+	height:8px;
+	width:25px;
+	background-color:inherit;
+	-moz-border-radius:10px 0 0 15px;
+	-webkit-border-radius:10px 0 0 15px;
+	border-radius:10px 0 0 15px;
+	-moz-transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg);
+	-o-transform:rotate(-2deg);
+	-webkit-transform:rotate(-2deg);
+}
+.three {
+	position:absolute;
+	top:138px;
+	left:20px;
+	width:15px;
+	height:8px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	-moz-transform:rotate(-16deg);
+	-ms-transform:rotate(-16deg);
+	-o-transform:rotate(-16deg);
+	-webkit-transform:rotate(-16deg);
+}
+.three span {
+	display:block;
+	position:absolute;
+	top:5px;
+	left:-34px;
+	width:37px;
+	height:8px;
+	background-color:inherit;
+	-moz-border-radius:18px 10px 12px;
+	-webkit-border-radius:18px 10px 12px;
+	border-radius:18px 10px 12px;
+	-moz-transform:rotate(-19deg);
+	-ms-transform:rotate(-19deg);
+	-o-transform:rotate(-19deg);
+	-webkit-transform:rotate(-19deg);
+}
+.four {
+	position: absolute;
+	top: 82px;
+	left: 205px;
+	width: 25px;
+	height: 8px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-transform: rotate(-13deg);
+	-ms-transform: rotate(-13deg);
+	-o-transform:rotate(-13deg);
+	-webkit-transform: rotate(-13deg);	
+}
+.four span {
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 20px;
+	width: 33px;
+	height: 8px;
+	background-color: inherit;
+	-moz-border-radius: 10px 18px 10px 15px;
+	-webkit-border-radius: 10px 18px 10px 15px;
+	border-radius: 10px 18px 10px 15px;
+	-moz-transform: rotate(13deg);
+	-ms-transform: rotate(13deg);
+	-o-transform:rotate(13deg);
+	-webkit-transform: rotate(13deg);
+}
+.five {
+	position: absolute;
+	top: 105px;
+	left: 211px;	
+	width: 22px;
+	height: 8px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+.five span {
+	display: block;
+	position: absolute;
+	top: 2px;
+	left: 16px;	
+	width: 25px;	
+	height: 8px;	
+	background-color: inherit;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-transform: rotate(11deg);
+	-ms-transform: rotate(11deg);
+	-o-transform:rotate(11deg);
+	-webkit-transform: rotate(11deg);
+}
+.six {
+	position: absolute;
+	top: 129px;	
+	left: 200px;
+	width: 22px;
+	height: 8px;
+	-moz-border-radius: 20px 10px 10px 18px;
+	-webkit-border-radius: 20px 10px 10px 18px;
+	border-radius: 20px 10px 10px 18px;
+	-moz-transform: rotate(11deg);
+	-ms-transform: rotate(11deg);
+	-o-transform:rotate(11deg);
+	-webkit-transform: rotate(11deg);
+}
+.six span {
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 18px;
+	width: 26px;	
+	height: 8px;
+	background-color: inherit;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-transform: rotate(13deg);
+	-ms-transform: rotate(13deg);
+	-o-transform:rotate(13deg);
+	-webkit-transform: rotate(13deg);
+}
+#bow {
+	position:absolute;
+	top:75px;
+	left:160px;
+	z-index:1000;
+	animation: bowWiggle 2s ease-in-out infinite;
+}
+
+@keyframes bowWiggle {
+	0%, 100% { transform: rotate(20deg); }
+	50% { transform: rotate(25deg); }
+}
+
+.center {
+	position:absolute;
+	left:140px;
+	width:32px;
+	height:35px;
+	background-color:#F51F27;
+	border:8px solid #000;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	z-index:2;
+	-moz-transform:rotate(20deg);
+	-ms-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	-webkit-transform:rotate(20deg);
+}
+.left {
+	position:absolute;
+	top:-33px;
+	left:99px;
+	width:46px;
+	height:62px;
+	background-color:#F51F27;
+	border:8px solid #000;
+	-moz-border-radius: 50px 50px 55px 46px;
+	-webkit-border-radius: 50px 50px 55px 46px;
+	border-radius: 50px 50px 55px 46px;
+	-moz-transform:rotate(19deg);
+	-ms-transform:rotate(19deg);
+	-o-transform:rotate(19deg);
+	-webkit-transform:rotate(19deg);
+}
+.left span {
+	position:absolute;
+	top:20px;
+	left:23px;
+	width:15px;
+	height:15px;
+	border:6px solid #000;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+}
+.right {
+	position:absolute;
+	top:0;
+	left:164px;
+	width:43px;
+	height:54px;
+	background-color:#F51F27;
+	border:8px solid #000;
+	-moz-border-radius:78px 48px 60px 63px;
+	-webkit-border-radius:78px 48px 60px 63px;
+	border-radius:78px 48px 60px 63px;
+	-moz-transform:rotate(22deg);
+	-ms-transform:rotate(22deg);
+	-o-transform:rotate(22deg);
+	-webkit-transform:rotate(22deg);
+}
+.right span {
+	position:absolute;
+	top:18px;
+	left:1px;
+	width:15px;
+	height:12px;
+	border:6px solid #000;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+}
+#body {
+	position:absolute;
+	top:295px;
+	width:250px;
+	height:150px;	
+}
+#leftarm {
+	position:absolute;
+	top:-8px;
+	left:142px;
+	width:40px;
+	height:73px;	
+	background-color:#FFF;
+	border:8px solid #000;
+	-moz-border-radius:158px 0 82px 100px;
+	-webkit-border-radius:158px 0 82px 100px;
+	border-radius:158px 0 82px 100px;
+	overflow:hidden;
+	-moz-transform:rotate(28deg);
+	-ms-transform:rotate(28deg);
+	-o-transform:rotate(28deg);
+	-webkit-transform:rotate(28deg);
+	-webkit-backface-visibility:hidden;
+	animation: leftArmWave 2s ease-in-out infinite;
+}
+
+@keyframes leftArmWave {
+	0%, 100% { transform: rotate(28deg); }
+	50% { transform: rotate(35deg); }
+}
+
+#leftarm span {
+	position:absolute;
+	top:-3px;
+	left:1px;
+	width:50px;
+	height:38px;
+	background-color:pink;
+	border-bottom:8px solid #000; 
+	-webkit-border-top-left-radius: 200px;
+	-moz-border-radius-topleft: 200px;
+	border-top-left-radius:200px;
+	-moz-transform:rotate(6deg);
+	-ms-transform:rotate(6deg);
+	-o-transform:rotate(6deg);
+	-webkit-transform:rotate(6deg);
+}
+#rightarm {
+	position:absolute;
+	top: -4px;
+	left: 302px;
+	height: 70px;
+	width: 40px;
+	background-color:#FFF;
+	border: 8px solid #000;
+	-moz-border-radius: 0 158px 100px 81px;
+	-webkit-border-radius: 0 158px 100px 81px;
+	border-radius: 0 158px 100px 81px;
+	overflow: hidden; 
+	-moz-transform: rotate(-28deg);
+	-ms-transform: rotate(-28deg);
+	-o-transform:rotate(-28deg);
+	-webkit-transform: rotate(-28deg);
+	-webkit-backface-visibility:hidden;
+}
+#rightarm span {
+	position:absolute;
+	top:-2px;
+	left:-4px;
+	width:41px;
+	height:36px;
+	background-color:pink;
+	border-bottom:8px solid #000;
+	-webkit-border-top-right-radius: 200px;
+	-moz-border-radius-topright: 200px;
+	border-top-right-radius:200px;
+	-moz-transform:rotate(-9deg);
+	-ms-transform:rotate(-9deg);
+	-o-transform:rotate(-9deg);
+	-webkit-transform:rotate(-9deg);
+}
+#chest {
+	position: absolute;
+	top: -32px;	
+	left: 213px;
+	width: 58px;
+	height: 54px;
+	background-color:pink;
+	border: 8px solid #000;
+	-moz-border-radius: 60px;
+	-webkit-border-radius: 60px;
+	border-radius: 60px;
+}
+#torso {
+	position:absolute;
+	top:-10px;
+	left:165px;
+	width:154px;
+	height:105px;
+	background-color:#F51F27;
+	border: 8px solid #000;
+	-moz-border-radius: 110px 110px 0 0;
+	-webkit-border-radius: 110px 110px 0 0;
+	border-radius: 110px 110px 0 0;
+	border-bottom:none;
+}
+#torso .leftshort {
+	display:block;
+	position:absolute;
+	top:92px;
+	left:-8px;
+	width:73px;
+	height:14px;
+	background-color:#F51F27;
+	border-bottom:8px solid #000;
+	border-left:8px solid #000;
+	-moz-border-radius:1px 3px 0 30px;
+	-webkit-border-radius:1px 3px 0 30px;
+	border-radius:1px 3px 0 30px;
+	z-index:3;
+	-moz-transform:rotate(2deg);
+	-ms-transform:rotate(2deg);
+	-o-transform:rotate(2deg);
+	-webkit-transform:rotate(2deg);
+}
+#torso .rightshort {
+	display:block;
+	position:absolute;
+	top:97px;
+	right:-8px;
+	width:73px;
+	height:8px;
+	background-color:#F51F27;
+	border-bottom:8px solid #000;
+	border-right:8px solid #000;
+	-moz-border-radius:3px 1px 30px 0;
+	-webkit-border-radius:3px 1px 30px 0;
+	border-radius:3px 1px 30px 0;
+	z-index:3;
+	-moz-transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg);
+	-o-transform:rotate(-2deg);
+	-webkit-transform:rotate(-2deg);
+}
+.crotch {
+	position:absolute;
+	bottom:-6px;
+	left:71px;
+	width:12px;
+	height:12px;
+	background-color:#000;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	-moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+}
+#leftleg {
+	position:absolute;
+	top:100px;
+	left:165px;
+	width:73px;
+	height:34px;
+	background-color:#FFF;
+	border:8px solid #000;
+	-moz-border-radius:0 15px 25px 35px;
+	-webkit-border-radius:0 15px 25px 35px;
+	border-radius:0 15px 25px 35px;
+}
+#rightleg {
+	position:absolute;
+	top:100px;
+	left:246px;
+	width:73px;
+	height:34px;
+	background-color:#fff;
+	border: 8px solid #000;
+	-moz-border-radius:15px 0 35px 25px;
+	-webkit-border-radius:15px 0 35px 25px;
+	border-radius:15px 0 35px 25px;
+}
+
+/* Rosa simple que sostiene Hello Kitty */
+.flower-in-hand {
+	position: absolute;
+	top: 270px;
+	left: 120px;
+	z-index: 1000;
+	transform: rotate(-25deg);
+	animation: flowerInHand 2s ease-in-out infinite;
+}
+
+.flower-in-hand .rosa {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 3rem;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.flower-in-hand .rosa:hover {
+	transform: scale(1.1);
+}
+
+.flower-in-hand .tallo {
+	width: 4px;
+	height: 80px;
+	background-color: #228B22;
+	border-radius: 2px;
+	margin-top: -5px;
+}
+
+
+
+@keyframes flowerInHand {
+	0%, 100% { transform: rotate(-25deg) translateY(0px); }
+	50% { transform: rotate(-20deg) translateY(-3px); }
+}
+
+/* Efecto de brillo para la rosa */
+.flower-in-hand {
+	/* Sin efectos de brillo */
+}
+
+.flower-in-hand:hover {
+	/* Sin efectos de brillo */
+}
+
+/* Corazón que aparece al tocar la rosa */
+.heart-popup {
+	position: absolute;
+	top: 80px;
+	right: 50px;
+	font-size: 2rem;
+	opacity: 0;
+	transform: scale(0);
+	z-index: 1001;
+	pointer-events: none;
+	transition: all 0.5s ease;
+}
+
+.heart-popup.show {
+	opacity: 1;
+	transform: scale(1);
+	animation: heartBeat 1s ease-in-out;
+}
+
+@keyframes heartBeat {
+	0% { transform: scale(0); }
+	50% { transform: scale(1.2); }
+	100% { transform: scale(1); }
+}
+
+/* Pétalos que caen */
+.falling-petals {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 999;
+}
+
+.falling-petal {
+	position: absolute;
+	width: 18px;
+	height: 25px;
+	background: linear-gradient(45deg, #FF1493, #DC143C, #FF69B4);
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	opacity: 0.9;
+	animation: fallingPetal 8s linear infinite;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Variaciones de color para los pétalos */
+.petal-fall1, .petal-fall4, .petal-fall7, .petal-fall10, .petal-fall13 {
+	background: linear-gradient(45deg, #FF1493, #DC143C, #FF69B4);
+}
+
+.petal-fall2, .petal-fall5, .petal-fall8, .petal-fall11, .petal-fall14 {
+	background: linear-gradient(45deg, #FF69B4, #FF1493, #DC143C);
+}
+
+.petal-fall3, .petal-fall6, .petal-fall9, .petal-fall12, .petal-fall15 {
+	background: linear-gradient(45deg, #DC143C, #FF69B4, #FF1493);
+}
+
+.petal-fall1 {
+	left: 10%;
+	animation-delay: 0s;
+	animation-duration: 6s;
+}
+
+.petal-fall2 {
+	left: 20%;
+	animation-delay: 1s;
+	animation-duration: 7s;
+}
+
+.petal-fall3 {
+	left: 30%;
+	animation-delay: 2s;
+	animation-duration: 8s;
+}
+
+.petal-fall4 {
+	left: 40%;
+	animation-delay: 0.5s;
+	animation-duration: 6.5s;
+}
+
+.petal-fall5 {
+	left: 50%;
+	animation-delay: 1.5s;
+	animation-duration: 7.5s;
+}
+
+.petal-fall6 {
+	left: 60%;
+	animation-delay: 2.5s;
+	animation-duration: 8.5s;
+}
+
+.petal-fall7 {
+	left: 70%;
+	animation-delay: 0.8s;
+	animation-duration: 6.8s;
+}
+
+.petal-fall8 {
+	left: 80%;
+	animation-delay: 1.8s;
+	animation-duration: 7.8s;
+}
+
+.petal-fall9 {
+	left: 90%;
+	animation-delay: 2.8s;
+	animation-duration: 8.8s;
+}
+
+.petal-fall10 {
+	left: 15%;
+	animation-delay: 3s;
+	animation-duration: 9s;
+}
+
+.petal-fall11 {
+	left: 25%;
+	animation-delay: 3.5s;
+	animation-duration: 9.5s;
+}
+
+.petal-fall12 {
+	left: 35%;
+	animation-delay: 4s;
+	animation-duration: 10s;
+}
+
+.petal-fall13 {
+	left: 45%;
+	animation-delay: 4.5s;
+	animation-duration: 10.5s;
+}
+
+.petal-fall14 {
+	left: 55%;
+	animation-delay: 5s;
+	animation-duration: 11s;
+}
+
+.petal-fall15 {
+	left: 65%;
+	animation-delay: 5.5s;
+	animation-duration: 11.5s;
+}
+
+@keyframes fallingPetal {
+	0% {
+		transform: translateY(-100px) rotate(0deg) translateX(0px);
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.9;
+	}
+	25% {
+		transform: translateY(25vh) rotate(90deg) translateX(20px);
+	}
+	50% {
+		transform: translateY(50vh) rotate(180deg) translateX(-15px);
+	}
+	75% {
+		transform: translateY(75vh) rotate(270deg) translateX(10px);
+	}
+	90% {
+		opacity: 0.9;
+	}
+	100% {
+		transform: translateY(100vh) rotate(360deg) translateX(0px);
+		opacity: 0;
+	}
+}
+
+
+
+/* Modal de la flor */
+.flower-modal {
+	display: none;
+	position: fixed;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.flower-modal.show {
+	opacity: 1;
+}
+
+.modal-content {
+/* Scroll para el contenido del modal */
+.modal-scroll {
+	max-height: 700px;
+	min-height: 400px;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+	position: relative;
+	background: linear-gradient(135deg, #ffe6f2, #fff0f5);
+	margin: 2% auto;
+	padding: 60px 40px;
+	border-radius: 30px;
+	width: 95%;
+	max-width: 900px;
+	min-width: 350px;
+	min-height: 400px;
+	text-align: center;
+	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+	transform: scale(0.7);
+	transition: transform 0.3s ease;
+}
+
+.flower-modal.show .modal-content {
+	transform: scale(1);
+}
+
+.close-modal {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #ff1493;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+	color: #ff69b4;
+}
+
+/* Flor en el modal */
+.flower-zoomed {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rose-emoji {
+	font-size: 8rem;
+	animation: roseGlow 2s ease-in-out infinite;
+	filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
+}
+
+@keyframes roseGlow {
+	0%, 100% { 
+		transform: scale(1); 
+		filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
+	}
+	50% { 
+		transform: scale(1.1); 
+		filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.8));
+	}
+}
+
+/* Mensaje especial */
+.special-message {
+	margin-top: 30px;
+}
+
+.special-message h2 {
+	font-size: 2.5rem;
+	color: #ff1493;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	animation: messageGlow 2s ease-in-out infinite;
+}
+
+@keyframes messageGlow {
+	0%, 100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+	50% { text-shadow: 2px 2px 20px rgba(255,20,147,0.5); }
+}
+
+.special-message p {
+	font-size: 1.2rem;
+	color: #666;
+	margin: 10px 0;
+	line-height: 1.6;
+}
+
+/* Efectos de partículas */
+@keyframes sparkle {
+	0% { transform: scale(0) rotate(0deg); opacity: 0; }
+	50% { transform: scale(1) rotate(180deg); opacity: 1; }
+	100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.birthday-message h1 {
+		font-size: 2rem;
+	}
+	
+	#kitty {
+		width: 400px;
+		height: 440px;
+	}
+	
+	.flower-in-hand {
+		top: 220px;
+		left: 140px;
+	}
+	
+	 	.heart-popup {
+ 		top: 60px;
+ 		right: 30px;
+ 		font-size: 1.5rem;
+ 	}
+ 	
+ 	.left-cheek {
+ 		top: 90px;
+ 		left: 20px;
+ 		width: 20px;
+ 		height: 12px;
+ 	}
+ 	
+ 	.right-cheek {
+ 		top: 90px;
+ 		right: 20px;
+ 		width: 20px;
+ 		height: 12px;
+ 	}
+	
+	.flower-in-hand .flower {
+		width: 40px;
+		height: 40px;
+	}
+	
+	.falling-petal {
+		width: 12px;
+		height: 16px;
+	}
+	
+	.modal-content {
+		width: 95%;
+		padding: 20px;
+	}
+	
+	 	.special-message h2 {
+ 		font-size: 1.8rem;
+ 	}
+ 	
+ 	.rose-emoji {
+ 		font-size: 5rem;
+ 	}
+}
+
+.copyright {
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #664A5A;
+	text-align:center;
+	clear:both;
+	margin:1em auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Contenedor principal de la animación -->
+<div class="animation-container">
+    <!-- Mensaje de cumpleaños -->
+    <div class="birthday-message">
+        <h1>¡Feliz Cumpleaños Naomi!</h1>
+        <p>Haz clic en la rosa para ver algo especial 🌹</p>
+    </div>
+
+    <!-- Hello Kitty con ramo de rosas -->
+    <div id="kitty" class="kitty-animated">
+        <div id="head">
+        	<div id="leftear">
+            	<span></span>
+            </div>
+            <div id="rightear"></div>
+                         <div id="face">
+             	<div class="lefteye"></div>
+                 <div class="righteye"></div>
+                 <div class="nose"></div>
+                 <div class="left-cheek"></div>
+                 <div class="right-cheek"></div>
+             </div>
+            
+            <div class="leftwhiskers one">
+            	<span></span>
+            </div>
+            <div class="leftwhiskers two">
+            	<span></span>
+            </div>
+            <div class="leftwhiskers three">
+            	<span></span>
+            </div>
+            
+            <div class="rightwhiskers four">
+            	<span></span>
+            </div>
+            <div class="rightwhiskers five">
+            	<span></span>
+          </div>
+            <div class="rightwhiskers six">
+            	<span></span>
+            </div>
+            
+        </div>
+        
+        <div id="bow">
+        	<div class="left"><span></span></div>
+        	<div class="center"></div>
+            <div class="right"><span></span></div>
+        </div>
+        
+        <div id="body">
+        	<div id="leftarm"><span></span></div>
+            <div id="rightarm"><span></span></div>
+            <div id="torso">
+            	<span class="leftshort"></span>
+                <span class="rightshort"></span>
+            	<div class="crotch"></div>
+            </div>
+            <div id="chest"></div>
+            <div id="leftleg"></div>
+            <div id="rightleg"></div>
+        </div>
+
+        <!-- Rosa simple que sostiene Hello Kitty -->
+        <div class="flower-in-hand">
+            <div class="rosa" id="flower">
+                🌹
+                <div class="tallo"></div>
+            </div>
+        </div>
+        
+        <!-- Corazón que aparece al tocar la rosa -->
+        <div class="heart-popup" id="heartPopup">
+            ❤️
+        </div>
+    </div>
+
+    <!-- Pétalos de rosa que caen -->
+    <div class="falling-petals">
+        <div class="falling-petal petal-fall1"></div>
+        <div class="falling-petal petal-fall2"></div>
+        <div class="falling-petal petal-fall3"></div>
+        <div class="falling-petal petal-fall4"></div>
+        <div class="falling-petal petal-fall5"></div>
+        <div class="falling-petal petal-fall6"></div>
+        <div class="falling-petal petal-fall7"></div>
+        <div class="falling-petal petal-fall8"></div>
+        <div class="falling-petal petal-fall9"></div>
+        <div class="falling-petal petal-fall10"></div>
+        <div class="falling-petal petal-fall11"></div>
+        <div class="falling-petal petal-fall12"></div>
+        <div class="falling-petal petal-fall13"></div>
+        <div class="falling-petal petal-fall14"></div>
+        <div class="falling-petal petal-fall15"></div>
+    </div>
+    </div>
+
+    <!-- Modal para el zoom del ramo de rosas -->
+    <div class="flower-modal" id="flowerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-scroll">
+                <div class="flower-zoomed">
+                    <div class="rose-emoji">🌹</div>
+                </div>
+                <div class="special-message">
+                    <h2>¡Feliz Cumpleaños Naomi! 🎂</h2>
+                    <p>Feliz cumpleaños, mi amor.
+                        Deseo de todo corazón que hoy disfrutes tu día especial. Estas palabras no son solo para felicitarte, sino también para darte la mayor prueba de amor que le he dado a alguien: mi compromiso contigo. Me comprometo a mejorar cada día, a convertirme en un buen hombre para ti, a ser responsable de mis acciones y a hacerte sentir orgullosa del hombre en el que me transformaré.</p>
+                    <p>Este es mi regalo y mi promesa: demostrarte con hechos que eres lo más importante para mí. Sé que tal vez no parezca mucho, y que quizá no sea suficiente para expresar todo lo que siento, pero créeme: te amo, te necesito y eres mi mundo entero.</p>
+                    <p>Naomi, eres la persona en la que pienso cada mañana y cada noche, mi persona favorita, a quien elegiría una y otra vez sin dudarlo. Te amo con todo mi ser y toda mi alma. Me encantas, me fascinas y no puedo imaginar una vida sin ti.</p>
+                    <P>Espero que disfrutes tu cumpleaños, mi amorcito. Hice esto con todo mi esfuerzo y todo mi corazón, pero sobre todo con la sinceridad de quien está completamente comprometido contigo.</P>
+                    <p>🌹 ERES SIMPLEMENTE UNA VISTA ESPECTACULAR 🌹</p>
+                    <P>Te amo infinitamente. ❤️</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// JavaScript para la funcionalidad de la rosa
+document.addEventListener('DOMContentLoaded', function() {
+    const flower = document.getElementById('flower');
+    const modal = document.getElementById('flowerModal');
+    const closeModal = document.querySelector('.close-modal');
+         const heartPopup = document.getElementById('heartPopup');
+     const leftEye = document.querySelector('.lefteye');
+     const rightEye = document.querySelector('.righteye');
+     const leftCheek = document.querySelector('.left-cheek');
+     const rightCheek = document.querySelector('.right-cheek');
+
+    // Abrir modal al hacer clic en la rosa
+    flower.addEventListener('click', function() {
+        // 1. Cerrar los ojos de Hello Kitty
+        leftEye.classList.add('blink-close');
+        rightEye.classList.add('blink-close');
+        
+                 // 2. Mostrar el corazón y los cachetes rojos
+         heartPopup.classList.add('show');
+         leftCheek.classList.add('show');
+         rightCheek.classList.add('show');
+        
+        // 3. Después de 2.5 segundos, abrir el modal
+        setTimeout(() => {
+            modal.style.display = 'block';
+            modal.classList.add('show');
+            
+            // Efecto de pétalos adicionales al hacer clic
+            createExtraPetals();
+        }, 2500);
+        
+                 // 4. Después de 3.5 segundos, abrir los ojos y ocultar el corazón y cachetes
+         setTimeout(() => {
+             leftEye.classList.remove('blink-close');
+             rightEye.classList.remove('blink-close');
+             heartPopup.classList.remove('show');
+             leftCheek.classList.remove('show');
+             rightCheek.classList.remove('show');
+         }, 3500);
+    });
+
+    // Cerrar modal
+    closeModal.addEventListener('click', function() {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
+    });
+
+    // Cerrar modal al hacer clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+    });
+
+    // Función para crear pétalos adicionales al hacer clic
+    function createExtraPetals() {
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                const petal = document.createElement('div');
+                petal.className = 'falling-petal';
+                petal.style.left = Math.random() * window.innerWidth + 'px';
+                petal.style.animationDelay = '0s';
+                petal.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                
+                // Variar colores de los pétalos
+                const colors = [
+                    'linear-gradient(45deg, #FF1493, #DC143C, #FF69B4)',
+                    'linear-gradient(45deg, #FF69B4, #FF1493, #DC143C)',
+                    'linear-gradient(45deg, #DC143C, #FF69B4, #FF1493)'
+                ];
+                petal.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                document.querySelector('.falling-petals').appendChild(petal);
+                
+                // Remover el pétalo después de la animación
+                setTimeout(() => {
+                    petal.remove();
+                }, 8000);
+            }, i * 100);
+        }
+    }
+});
+</script>
+
+</body>
+</html>
